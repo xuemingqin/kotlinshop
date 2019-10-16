@@ -18,18 +18,19 @@ class MainActivity : AppCompatActivity() {
         mBottomNavBar.checkMsgBadge(false)
         initview()
 
-        Observable.timer(2,TimeUnit.SECONDS)
-            . observeOn(AndroidSchedulers.mainThread())
-            .subscribe({mBottomNavBar.checkCartBadge(0)})
+        Observable.timer(2, TimeUnit.SECONDS)
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({ mBottomNavBar.checkCartBadge(0) })
 
-        Observable.timer(2,TimeUnit.SECONDS)
-            . observeOn(AndroidSchedulers.mainThread())
-            .subscribe({mBottomNavBar.checkMsgBadge(true)})
+        Observable.timer(2, TimeUnit.SECONDS)
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({ mBottomNavBar.checkMsgBadge(true) })
 
     }
-    private fun initview(){
-        val  manager=supportFragmentManager.beginTransaction()
-        manager.replace(R.id.mContaier,HomeFragment()).commit()
+
+    private fun initview() {
+        val manager = supportFragmentManager.beginTransaction()
+        manager.replace(R.id.mContaier, HomeFragment()).commit()
     }
 
 }

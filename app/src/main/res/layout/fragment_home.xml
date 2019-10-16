@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+>
+
+
+    <LinearLayout
+            style="@style/SearchHeaderStyle"
+            android:paddingLeft="10dp"
+          >
+
+        <EditText
+                style="@style/SearchHeaderEtStyle"
+                android:cursorVisible="false"
+                android:hint="搜索商品/品类"
+                android:id="@+id/mSearchEt"
+        />
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mScanIv"
+                android:src="@drawable/icon_scan"
+                android:layout_margin="3dp"
+        />
+
+    </LinearLayout>
+
+    <com.youth.banner.Banner
+            android:id="@+id/mHomeBanner"
+            android:layout_height="150dp"
+            android:layout_width="match_parent"/>
+
+
+</LinearLayout>

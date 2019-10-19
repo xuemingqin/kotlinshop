@@ -6,7 +6,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="bottom"
-        tools:context=".MainActivity">
+        android:orientation="vertical"
+        tools:context=".ui.activity.MainActivity">
+
+    <FrameLayout android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:id="@+id/mContaier"
+                 android:layout_weight="1"/>
+
 
     <com.example.kotlinshop.widgets.BottomNavBar
             android:layout_width="match_parent"
@@ -14,6 +21,6 @@
             style="@style/MatchWrap"
             android:layout_gravity="bottom"
             android:id="@+id/mBottomNavBar"
-         />
+    />
 
 </LinearLayout>

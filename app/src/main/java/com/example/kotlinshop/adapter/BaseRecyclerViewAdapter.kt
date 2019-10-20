@@ -12,15 +12,15 @@ abstract class BaseRecyclerViewAdapter<T, VH : RecyclerView.ViewHolder>(var mCon
     var dataList: MutableList<T> = mutableListOf()
 
     // 设置数据
-    fun setData(sources:MutableList<T>) {
-       dataList=sources
+    fun setData(sources: MutableList<T>) {
+        dataList = sources
         notifyDataSetChanged()
     }
 
     override fun onBindViewHolder(holder: VH, position: Int) {
-        holder.itemView.setOnClickListener{
+        holder.itemView.setOnClickListener {
             mItemClickListener?.let {
-                it!!.onItemClick(dataList[position],position)
+                it!!.onItemClick(dataList[position], position)
             }
         }
     }
@@ -30,7 +30,6 @@ abstract class BaseRecyclerViewAdapter<T, VH : RecyclerView.ViewHolder>(var mCon
     }
 
     // ItemClick事件声明
-
     interface OnItemClickListener<in T> {
         fun onItemClick(item: T, position: Int)
     }

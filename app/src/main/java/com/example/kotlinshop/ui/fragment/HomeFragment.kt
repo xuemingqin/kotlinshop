@@ -42,7 +42,6 @@ class HomeFragment : Fragment() {
                 HOME_DISCOUNT_FIVE
             )
         )
-
     }
 
     private fun initBanner() {
@@ -53,7 +52,5 @@ class HomeFragment : Fragment() {
         //设置指示器位置（当banner模式中有指示器时右下角）
         mHomeBanner.setIndicatorGravity(BannerConfig.RIGHT)
         mHomeBanner.start()
-
     }
-
 }

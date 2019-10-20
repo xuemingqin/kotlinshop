@@ -28,4 +28,25 @@
             android:layout_height="150dp"
             android:layout_width="match_parent"/>
 
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/text_light_dark"
+            android:background="@color/common_white"
+            android:paddingLeft="@dimen/common_margin"
+            android:paddingTop="@dimen/common_margin_small"
+            android:text="火爆进行中"
+            android:drawablePadding="@dimen/common_padding_small"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/commonRecyclerView"
+            android:background="@color/common_white"
+            android:paddingLeft="@dimen/common_padding"
+            android:paddingRight="@dimen/common_padding"
+            android:paddingBottom="@dimen/common_padding_small"
+            android:id="@+id/mHomeDiscountRv"/>
+
 </LinearLayout>

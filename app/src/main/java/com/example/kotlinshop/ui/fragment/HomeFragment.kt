@@ -4,13 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.chen.baselibrary.widgets.BannerImageLoader
-import com.example.chen.kotlinshop.common.HOME_BANNER_FOUR
-import com.example.chen.kotlinshop.common.HOME_BANNER_ONE
-import com.example.chen.kotlinshop.common.HOME_BANNER_THREE
-import com.example.chen.kotlinshop.common.HOME_BANNER_TWO
+import com.example.chen.kotlinshop.common.*
 import com.example.kotlinshop.R
+import com.example.kotlinshop.adapter.HomeDiscountAdapter
 import com.youth.banner.BannerConfig
 import com.youth.banner.Transformer
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -23,6 +23,26 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initBanner()
+        initDiscount()
+    }
+
+    private fun initDiscount() {
+        val manager = LinearLayoutManager(context)
+        manager.orientation = LinearLayoutManager.HORIZONTAL
+        mHomeDiscountRv.layoutManager = manager
+        val discountAdapter = HomeDiscountAdapter(activity!!)
+        //适配器绑定
+        mHomeDiscountRv.adapter = discountAdapter
+        discountAdapter.setData(
+            mutableListOf(
+                HOME_DISCOUNT_ONE,
+                HOME_DISCOUNT_TWO,
+                HOME_DISCOUNT_THREE,
+                HOME_DISCOUNT_FOUR,
+                HOME_DISCOUNT_FIVE
+            )
+        )
+
     }
 
     private fun initBanner() {

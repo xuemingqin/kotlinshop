@@ -9,8 +9,8 @@ import android.widget.TextView
 import com.example.kotlinshop.R
 import org.jetbrains.anko.*
 
-/*
-    公告组件封装
+/**
+ *公告组件封装
  */
 class NewsFlipperView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout(context, attrs, defStyleAttr) {
     private val mFlipperView: ViewFlipper
@@ -33,8 +33,6 @@ class NewsFlipperView @JvmOverloads constructor(context: Context, attrs: Attribu
         textView.text = text
         textView.textSize = px2sp(dimen(R.dimen.text_small_size))
         textView.layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
-
-
         return textView
     }
 

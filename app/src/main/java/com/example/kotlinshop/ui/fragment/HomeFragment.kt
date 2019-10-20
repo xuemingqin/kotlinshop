@@ -11,6 +11,7 @@ import com.example.chen.kotlinshop.common.HOME_BANNER_ONE
 import com.example.chen.kotlinshop.common.HOME_BANNER_THREE
 import com.example.chen.kotlinshop.common.HOME_BANNER_TWO
 import com.example.kotlinshop.R
+import com.kotlin.message.widgets.NewsFlipperView
 import com.youth.banner.BannerConfig
 import com.youth.banner.Transformer
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -23,6 +24,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initBanner()
+        initNews()
+    }
+
+    private fun initNews() {
+       mNewFlipper.setData(arrayOf("夏日炎炎，第一波福利还有30秒到达战场", "新用户立领1000元优惠券"))
     }
 
     private fun initBanner() {
@@ -35,5 +41,6 @@ class HomeFragment : Fragment() {
         mHomeBanner.start()
 
     }
+
 
 }

@@ -28,4 +28,14 @@
             android:layout_height="150dp"
             android:layout_width="match_parent"/>
 
+    <com.kotlin.message.widgets.NewsFlipperView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mNewFlipper"
+            android:layout_marginLeft="@dimen/common_margin_middle"
+            android:layout_marginTop="@dimen/common_margin_small"
+            android:layout_marginRight="@dimen/common_margin_middle"
+            android:layout_marginBottom="@dimen/common_margin_small"/>
+
+
 </LinearLayout>

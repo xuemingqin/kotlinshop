@@ -10,9 +10,11 @@ import com.example.chen.baselibrary.widgets.BannerImageLoader
 import com.example.chen.kotlinshop.common.*
 import com.example.kotlinshop.R
 import com.example.kotlinshop.adapter.HomeDiscountAdapter
+import com.example.kotlinshop.adapter.TopicAdapter
 import com.youth.banner.BannerConfig
 import com.youth.banner.Transformer
 import kotlinx.android.synthetic.main.fragment_home.*
+import me.crosswall.lib.coverflow.CoverFlow
 
 class HomeFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -24,6 +26,15 @@ class HomeFragment : Fragment() {
         initBanner()
         initNews()
         initDiscount()
+        initTopic()
+    }
+
+    private fun initTopic() {
+        mTopicPager.adapter=TopicAdapter(context!!,
+            listOf(HOME_TOPIC_ONE, HOME_TOPIC_TWO, HOME_TOPIC_THREE, HOME_TOPIC_FOUR, HOME_TOPIC_FIVE))
+        mTopicPager.currentItem=1
+        mTopicPager.offscreenPageLimit=5
+        CoverFlow.Builder().with(mTopicPager).scale(0.3f).pagerMargin(-30.0f).spaceSize(0.0f).build()
     }
 
     private fun initDiscount() {

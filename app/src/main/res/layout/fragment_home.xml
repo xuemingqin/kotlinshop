@@ -58,4 +58,19 @@
             android:paddingBottom="@dimen/common_padding_small"
             android:id="@+id/mHomeDiscountRv"/>
 
+    <me.crosswall.lib.coverflow.core.PagerContainer
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mTop_container"
+            android:background="@drawable/home_container_bg">
+
+        <androidx.viewpager.widget.ViewPager
+                android:layout_width="200dp"
+                android:layout_height="160dp"
+                android:id="@+id/mTopicPager"
+                android:overScrollMode="never"
+                android:layout_gravity="center"/>
+
+    </me.crosswall.lib.coverflow.core.PagerContainer>
+
 </LinearLayout>

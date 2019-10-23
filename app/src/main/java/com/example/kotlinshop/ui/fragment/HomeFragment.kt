@@ -45,7 +45,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun initNews() {
-       mNewFlipper.setData(arrayOf("夏日炎炎，第一波福利还有30秒到达战场", "新用户立领1000元优惠券"))
+        mNewFlipper.setData(arrayOf("夏日炎炎，第一波福利还有30秒到达战场", "新用户立领1000元优惠券"))
     }
 
     private fun initBanner() {

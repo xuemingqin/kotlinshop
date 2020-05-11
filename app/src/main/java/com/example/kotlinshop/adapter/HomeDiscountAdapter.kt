@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.layout_home_discount_item.view.*
 
 
 class HomeDiscountAdapter(context: Context) : BaseRecyclerViewAdapter<String, HomeDiscountAdapter.ViewHolder>(context) {
+
     //加载item布局
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeDiscountAdapter.ViewHolder {
         val view = LayoutInflater.from(mContext).inflate(R.layout.layout_home_discount_item, parent, false)

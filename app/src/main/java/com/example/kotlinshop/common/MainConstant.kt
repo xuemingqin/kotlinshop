@@ -1,4 +1,4 @@
-package com.example.chen.kotlinshop.common
+package com.example.kotlinshop.common
 
 
 /*

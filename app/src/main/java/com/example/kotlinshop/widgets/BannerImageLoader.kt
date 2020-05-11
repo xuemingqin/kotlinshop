@@ -1,4 +1,4 @@
-package com.example.chen.baselibrary.widgets
+package com.example.kotlinshop.widgets
 
 import android.content.Context
 import android.widget.ImageView

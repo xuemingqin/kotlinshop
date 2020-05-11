@@ -6,10 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.chen.baselibrary.widgets.BannerImageLoader
-import com.example.chen.kotlinshop.common.*
 import com.example.kotlinshop.R
 import com.example.kotlinshop.adapter.HomeDiscountAdapter
+import com.example.kotlinshop.common.*
+import com.example.kotlinshop.widgets.BannerImageLoader
 import com.youth.banner.BannerConfig
 import com.youth.banner.Transformer
 import kotlinx.android.synthetic.main.fragment_home.*

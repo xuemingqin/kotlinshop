@@ -5,6 +5,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'realm-android'
 
@@ -42,6 +43,7 @@ dependencies {
     implementation 'com.ashokvarma.android:bottom-navigation-bar:2.1.0'
     implementation 'com.hyman:flowlayout-lib:1.1.2'
 
+
     // baselibrary
     //dagger2
     //def dagger_version = '2.16'
@@ -58,7 +60,7 @@ dependencies {
     annotationProcessor "com.alibaba:arouter-compiler:$arouter_compiler_version"
 
     // Anko Commons
-    def anko_version = '0.10.5'
+    def anko_version = '0.10.8'
     api "org.jetbrains.anko:anko-commons:$anko_version"
     // Support-v4 (only Anko Commons)
     api "org.jetbrains.anko:anko-support-v4-commons:$anko_version"
@@ -96,7 +98,7 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
     implementation 'com.youth.banner:banner:1.4.9'
     implementation'com.github.bumptech.glide:glide:3.7.0'
-    implementation "org.jetbrains.anko:anko:0.10.1"
+    implementation "org.jetbrains.anko:anko:$anko_version"
     implementation 'com.github.shts:TriangleLabelView:1.1.2'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'com.github.bumptech.glide:glide:4.10.0'
@@ -104,5 +106,6 @@ dependencies {
     implementation  'com.android.support:support-v4:24.2.1'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
 
 }
